@@ -25,6 +25,7 @@ const player2 = {
 function createPlayer(player, player, obj) {
     const arenas = document.querySelector('.arenas');
     const player1 = document.createElement('div');
+    const player2 = document.createElement('div');
     const progressbar = document.createElement('div');
     const life = document.createElement('div');
     const name = document.createElement('div');
@@ -32,6 +33,7 @@ function createPlayer(player, player, obj) {
     const img = document.createElement('img');
 
     player1.classList.add('player1');
+    player2.classList.add('player2');
     progressbar.classList.add('progressbar');
     life.classList.add('life');
     life.style.width = player.hp + '%';
@@ -42,11 +44,14 @@ function createPlayer(player, player, obj) {
     img.src = `${player.img}`;
 
     arenas.appendChild(player1);
+    arenas.appendChild(player2);
     player1.appendChild(progressbar);
+    player2.appendChild(progressbar);
     progressbar.appendChild(life);
     progressbar.appendChild(name);
 
     player1.appendChild(character);
+    player2.appendChild(character);
     character.appendChild(img);
 
 
